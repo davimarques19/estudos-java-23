@@ -15,9 +15,11 @@ public class ClienteService {
     @Autowired
     private ClienteRepository repository;
 
-    public Cliente obterUsuario() {
-        return repository.obterUsuario();
-
+    public Cliente findClienteById(Long id) {
+        return repository.findClienteById(id);
     }
 
+    public Object getTodosOsClientes() {
+        return repository.findAll();
+    }
 }
